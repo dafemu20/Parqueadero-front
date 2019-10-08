@@ -1,0 +1,30 @@
+<form (ngSubmit) = "ingresarVehiculo()">
+  <div class="card border-dark mb-3">
+    <div class="card-header">Ingresa vehiculo parqueadero</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">Registro vehiculo</h5>
+      <div class="form-group">
+        <label for="placa">Placa</label>
+        <input type="text" class="form-control" placeholder="Ingrese placa" [(ngModel)]="vehiculo.VehiculoPlaca" name="placa">
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <input type="text" class="form-control" placeholder="Descripción" [(ngModel)]="vehiculo.DescripcionVehiculo" name="descripcion">
+      </div>
+      <div class="form-group">
+        <label for="cilindraje">Cilindraje</label>
+        <input type="text" class="form-control" placeholder="Cilindraje" [(ngModel)]="vehiculo.Cilindraje" name="cilindraje">
+      </div>
+      <div class="form-group">
+      <label for="tipoVehiculo">Tipo vehiculo</label>
+      <select class="form-control" [(ngModel)]="vehiculo.TipoVehiculoId" name="tipoVehiculo">
+        <option value=1>Moto</option>
+        <option value=2>Carro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button rol="button" class="btn btn-primary">Ingresar</button>
+    </div>
+    </div>
+  </div>
+</form>
